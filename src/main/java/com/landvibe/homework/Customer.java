@@ -1,40 +1,39 @@
 package com.landvibe.homework;
 
-import java.util.Vector;
+import java.util.*;
 
 public class Customer {
-    String name;
-    int money;
-    //고객이 주문한 주문 번호를 저장해놓는 정수형 벡터
-    Vector<Integer> allOrder = new Vector<Integer>();
+    private String name;
+    private int money;
+    //고객이 주문한 주문 번호를 저장해놓는 정수형 리스트
+    private List<Integer> orderHistory = new ArrayList<>();
 
-    Customer(String name, int money) {
+    public Customer(String name, int money) {
         this.name = name;
         this.money = money;
     }
 
-    String getName() { return name; };
+    public String getName() { return name; };
+    public int getMoney() { return money; };
+    public List<Integer> getOrderHistory() { return orderHistory; };
 
-    int getMoney() { return money; };
-
-    Vector<Integer> getAllOrder() { return allOrder; };
-
-    void setAllOrder(int i) {
-        allOrder.add(i);
+    // ArrayList인 orderHistory에 주문 내역 하나를 더해주는 함수
+    public void addOrderHistory(int i) {
+        orderHistory.add(i);
     }
 
     // 잔고를 출력하는 함수
-    void printMoney() {
+    public void printMoney() {
         System.out.println(name + " 님의 잔고 : " + money + "원");
     }
 
     // 계산하는 함수로, 가격을 money에서 빼줌
-    void payMoney(int price) {
+    public void payMoney(int price) {
         this.money -= price;
     }
 
     // 잔고를 충전해주는 함수로, 충전한 만큼 money에 더해줌
-    void chargeMoney(int charging) {
+    public void chargeMoney(int charging) {
         this.money += charging;
     }
 

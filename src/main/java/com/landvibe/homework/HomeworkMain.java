@@ -43,7 +43,7 @@ public class HomeworkMain {
                 kiosk.orderMenu(order);
             }
             else if(choice.equals("3") || choice.equals("주문 내역 보기")) {
-                kiosk.printAllOrder();
+                kiosk.printOrderHistory();
             }
             else if(choice.equals("4") || choice.equals("내 잔고 보기")) {
                 customer.printMoney();

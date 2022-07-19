@@ -1,15 +1,15 @@
 package com.landvibe.homework;
 import java.util.*;
 public class Menu {
-    private String menuName;
-    private int menuPrice;
+    private String name;
+    private int price;
 
-    public Menu(String menuName, int menuPrice) {
-        this.menuName = menuName;
-        this.menuPrice = menuPrice;
+    public Menu(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
-    public String getMenuName() { return menuName; };
-    public int getMenuPrice() { return menuPrice; };
+    public String getName() { return name; };
+    public int getPrice() { return price; };
 
 }

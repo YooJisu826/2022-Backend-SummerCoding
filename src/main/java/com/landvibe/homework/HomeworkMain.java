@@ -21,7 +21,6 @@ public class HomeworkMain {
         Kiosk kiosk = new Kiosk(customer);
 
         // 여기서부터 시작
-
         kiosk.printOption();
 
         while(true) {

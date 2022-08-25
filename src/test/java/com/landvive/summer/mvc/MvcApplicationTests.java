@@ -1,13 +1,13 @@
-package com.landvibe.summercoding;
+package com.landvive.summer.mvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SummerCodingApplicationTests {
+class MvcApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

@@ -1,5 +1,6 @@
 package com.landvive.summer.mvc.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,7 +12,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString(exclude = "product")
 @Table(name= "category")
 public class Category {
     @Id
@@ -21,6 +21,7 @@ public class Category {
     private String name;
     private Long count; //해당 카테고리의 Product 개수
 
+    @JsonIgnore
     @OneToMany(mappedBy = "category")
     private List<Product> productList;
 }

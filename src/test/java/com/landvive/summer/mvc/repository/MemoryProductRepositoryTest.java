@@ -14,9 +14,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MemoryProductRepositoryTest {
 
-    ProductRepository productRepository = new MemoryProductRepository();
+    ProRepository productRepository;
 
-    @Test
+    /*@Test
     void save() {
 
     }
@@ -39,5 +39,5 @@ class MemoryProductRepositoryTest {
 
         //then
         Assertions.assertThat(savedProducts.equals(products));
-    }
+    }*/
 }

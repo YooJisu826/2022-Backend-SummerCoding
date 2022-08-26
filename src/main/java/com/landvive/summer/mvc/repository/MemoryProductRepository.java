@@ -36,10 +36,12 @@ public class MemoryProductRepository implements ProductRepository {
     @Override
     public Optional<Product> findByCategoryId(Long categoryId) {
         return db.stream()
-                .filter(product -> categoryId.equals(product.getCategoryId()))
+                .filter(product -> categoryId.equals(product.getCategory().getId()))
                 .findAny(); //찾으면 던져라
 
     }
+
+
 
     @Override
     public List<Product> findAll() {

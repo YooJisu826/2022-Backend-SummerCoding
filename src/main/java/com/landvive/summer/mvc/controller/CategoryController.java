@@ -34,7 +34,7 @@ public class CategoryController {
     @GetMapping("/categories")
     @ResponseBody
     public CategoriesResponse findAll() {
-        List<Category> categoryList = service.findAll();
+        List<Category> categoryList = service.getCategoryList();
         return new CategoriesResponse(categoryList.size(), categoryList);
     }
 }
